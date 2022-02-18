@@ -1,24 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { ColorScheme, ColorSchemeProvider, MantineProvider, Paper } from "@mantine/core";
+import { useHotkeys, useLocalStorageValue } from "@mantine/hooks";
+import "./App.css";
+import Cards from "./Components/Cards";
+import LightAndDarkModeButton from "./Components/LightDarkButton";
 
 function App() {
+  const [colorScheme, setColorScheme] = useLocalStorageValue<ColorScheme>({
+    key: 'mantine-color-scheme',
+    defaultValue: 'light',
+  });
+
+  const toggleColorScheme = (value?: ColorScheme) =>
+    setColorScheme(value || (colorScheme === 'dark' ? 'light' : 'dark'));
+
+  useHotkeys([['mod+J', () => toggleColorScheme()]]);
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ColorSchemeProvider colorScheme={colorScheme} toggleColorScheme={toggleColorScheme}>
+      <MantineProvider theme={{colorScheme}}>
+        <Paper padding="md" radius={0} style={{minHeight: "100vh"}}>
+        <Cards />
+        <LightAndDarkModeButton />
+        </Paper>
+      </MantineProvider>
+      </ColorSchemeProvider>
     </div>
   );
 }
