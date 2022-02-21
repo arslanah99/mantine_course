@@ -1,6 +1,7 @@
 import { ColorScheme, ColorSchemeProvider, MantineProvider, Paper } from "@mantine/core";
 import { useHotkeys, useLocalStorageValue } from "@mantine/hooks";
 import "./App.css";
+import Buttons from "./Components/Buttons";
 import Cards from "./Components/Cards";
 import LightAndDarkModeButton from "./Components/LightDarkButton";
 
@@ -20,8 +21,9 @@ function App() {
       <ColorSchemeProvider colorScheme={colorScheme} toggleColorScheme={toggleColorScheme}>
       <MantineProvider theme={{colorScheme}}>
         <Paper padding="md" radius={0} style={{minHeight: "100vh"}}>
-        <Cards />
         <LightAndDarkModeButton />
+        <Cards />
+        <Buttons/>
         </Paper>
       </MantineProvider>
       </ColorSchemeProvider>
