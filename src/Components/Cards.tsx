@@ -17,7 +17,6 @@ import {
       theme.colorScheme === "dark" ? theme.colors.dark[1] : theme.colors.gray[7];
   
     return (
-      <div className="App">
           <Grid justify="space-around" >
             <Grid.Col  style={{maxWidth: 350}} sm={4} xs={4}>
               <Card shadow="sm" padding="lg">
@@ -137,7 +136,6 @@ import {
               </Card>
             </Grid.Col>
           </Grid>
-      </div>
     );
   }
   
