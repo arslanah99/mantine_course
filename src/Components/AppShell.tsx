@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { AppShell, Burger, Header, MediaQuery, Navbar, Text, useMantineTheme } from '@mantine/core';
 import LightAndDarkModeButton from './LightDarkButton';
 import TableExample from './TableExample';
+import ChipsExample from './ChipsExample';
 
 function AppShellExample() {
   const [opened, setOpened] = useState(false);
@@ -60,7 +61,7 @@ function AppShellExample() {
         </Header>
       }
     >
-     <TableExample />
+     <ChipsExample />
     </AppShell>
   );
 }
