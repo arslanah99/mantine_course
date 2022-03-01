@@ -3,6 +3,7 @@ import { AppShell, Burger, Header, MediaQuery, Navbar, Text, useMantineTheme } f
 import LightAndDarkModeButton from './LightDarkButton';
 import TableExample from './TableExample';
 import ChipsExample from './ChipsExample';
+import InputExample from './InputExample';
 
 function AppShellExample() {
   const [opened, setOpened] = useState(false);
@@ -62,6 +63,7 @@ function AppShellExample() {
       }
     >
      <ChipsExample />
+     <InputExample />
     </AppShell>
   );
 }
