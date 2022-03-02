@@ -4,6 +4,7 @@ import LightAndDarkModeButton from './LightDarkButton';
 import TableExample from './TableExample';
 import ChipsExample from './ChipsExample';
 import InputExample from './InputExample';
+import TitleAndTextExample from './TextAndTitleExample';
 
 function AppShellExample() {
   const [opened, setOpened] = useState(false);
@@ -64,6 +65,7 @@ function AppShellExample() {
     >
      <ChipsExample />
      <InputExample />
+     <TitleAndTextExample />
     </AppShell>
   );
 }
