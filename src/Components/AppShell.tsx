@@ -5,12 +5,19 @@ import TableExample from './TableExample';
 import ChipsExample from './ChipsExample';
 import InputExample from './InputExample';
 import TitleAndTextExample from './TextAndTitleExample';
+import {
+  BrowserRouter as Router,
+  Link,
+  Route,
+  Routes
+} from "react-router-dom"
 
 function AppShellExample() {
   const [opened, setOpened] = useState(false);
   const theme = useMantineTheme();
 
   return (
+    <Router>
     <AppShell
       // navbarOffsetBreakpoint controls when navbar should no longer be offset with padding-left
       navbarOffsetBreakpoint="sm"
@@ -32,10 +39,17 @@ function AppShellExample() {
              <Text>hello this is title</Text>
          </Navbar.Section>
          <Navbar.Section grow mt="lg">
-            <Text>example 1</Text>
-            <Text>example 2</Text>
-            <Text>example 3</Text>
-            <Text>example 4</Text>
+           <div style={{display:"flex", flexDirection: "column"}}>
+            <Text component={Link} variant="link" to="/">
+              Home Page
+            </Text>
+            <Text component={Link} variant="link" to="/input">
+              Input Page
+            </Text>
+            <Text component={Link} variant="link" to="/titlePage">
+              Title Page
+            </Text>
+           </div>
          </Navbar.Section>
          <Navbar.Section>
              <Text>Footer</Text>
@@ -63,10 +77,13 @@ function AppShellExample() {
         </Header>
       }
     >
-     <ChipsExample />
-     <InputExample />
-     <TitleAndTextExample />
+      <Routes>
+        <Route path="/" element={<ChipsExample />} />
+        <Route path="/input" element={<InputExample />} />
+        <Route path="/titlePage" element={<TitleAndTextExample />} />
+      </Routes>
     </AppShell>
+    </Router>
   );
 }
 
