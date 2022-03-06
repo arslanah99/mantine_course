@@ -11,6 +11,8 @@ import {
   Route,
   Routes
 } from "react-router-dom"
+import CalendarExample from './CalendarExample';
+import TimeInputExample from './TimeInputExample';
 
 function AppShellExample() {
   const [opened, setOpened] = useState(false);
@@ -49,6 +51,12 @@ function AppShellExample() {
             <Text component={Link} variant="link" to="/titlePage">
               Title Page
             </Text>
+            <Text component={Link} variant="link" to="/calendarPage">
+              Calendar Page
+            </Text>
+            <Text component={Link} variant="link" to="/timeInputPage">
+              Time Input Page
+            </Text>
            </div>
          </Navbar.Section>
          <Navbar.Section>
@@ -81,6 +89,9 @@ function AppShellExample() {
         <Route path="/" element={<ChipsExample />} />
         <Route path="/input" element={<InputExample />} />
         <Route path="/titlePage" element={<TitleAndTextExample />} />
+        <Route path="/calendarPage" element={<CalendarExample />} />
+        <Route path="/timeInputPage" element={<TimeInputExample />} />
+
       </Routes>
     </AppShell>
     </Router>
