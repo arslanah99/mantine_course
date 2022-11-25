@@ -19,7 +19,7 @@ import {
     return (
           <Grid justify="space-around" >
             <Grid.Col  style={{maxWidth: 350}} sm={4} xs={4}>
-              <Card shadow="sm" padding="lg">
+              <Card shadow="sm" >
                 <Card.Section>
                   <Image
                     src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg"
@@ -58,7 +58,7 @@ import {
               </Card>
             </Grid.Col>
             <Grid.Col style={{maxWidth: 350}} sm={4} xs={4}>
-              <Card shadow="sm" padding="lg">
+              <Card shadow="sm" >
                 <Card.Section>
                   <Image
                     src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg"
@@ -97,7 +97,7 @@ import {
               </Card>
             </Grid.Col>
             <Grid.Col style={{maxWidth: 350}} sm={4} xs={4}>
-              <Card shadow="sm" padding="lg">
+              <Card shadow="sm" >
                 <Card.Section>
                   <Image
                     src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg"

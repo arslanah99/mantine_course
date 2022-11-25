@@ -14,6 +14,7 @@ import {
 import CalendarExample from './CalendarExample';
 import TimeInputExample from './TimeInputExample';
 import NotificationExample from './NotificationsExample';
+import EmblaCarouselExample from './EmblaCarousel';
 
 function AppShellExample() {
   const [opened, setOpened] = useState(false);
@@ -28,7 +29,6 @@ function AppShellExample() {
       fixed
       navbar={
         <Navbar
-          padding="md"
           // Breakpoint at which navbar will be hidden if hidden prop is true
           hiddenBreakpoint="sm"
           // Hides navbar when viewport size is less than value specified in hiddenBreakpoint
@@ -61,6 +61,9 @@ function AppShellExample() {
             <Text component={Link} variant="link" to="/notificationPage">
               Notification Page
             </Text>
+            <Text component={Link} variant="link" to="/emblaCarouselPage">
+             Embla Carosuel Page
+            </Text>
            </div>
          </Navbar.Section>
          <Navbar.Section>
@@ -69,7 +72,7 @@ function AppShellExample() {
         </Navbar>
       }
       header={
-        <Header height={70} padding="md">
+        <Header height={70} >
           {/* Handle other responsive styles with MediaQuery component or createStyles function */}
           <div style={{ display: 'flex', justifyContent: "space-between"}}>
             <MediaQuery largerThan="sm" styles={{ display: 'none' }}>
@@ -96,6 +99,7 @@ function AppShellExample() {
         <Route path="/calendarPage" element={<CalendarExample />} />
         <Route path="/timeInputPage" element={<TimeInputExample />} />
         <Route path="/notificationPage" element={<NotificationExample />} />
+        <Route path="/emblaCarouselPage" element={<EmblaCarouselExample />} />
 
       </Routes>
     </AppShell>

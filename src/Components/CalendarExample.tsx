@@ -33,7 +33,9 @@ import 'dayjs/locale/uk';
                   height: 70,
                 },
               })}
-            locale="uk" onChange={setCalendarVal} value={calendarVal} amountOfMonths={2}/>
+            locale="uk" 
+            // onChange={setCalendarVal}
+             value={calendarVal} amountOfMonths={2}/>
          <RangeCalendar onChange={setRangeVal} value={rangeVal} amountOfMonths={2}/>
          </div>
     );

@@ -1,5 +1,4 @@
 import {
-    Chips,
     Chip
   } from "@mantine/core";
 import { useEffect, useState } from "react";
@@ -13,12 +12,10 @@ import { useEffect, useState } from "react";
 
     return (
          <div>
-<Chips  color="red" variant="filled" spacing="lg" size="xl" radius="xs" value={value} onChange={setValue} multiple>
       <Chip value="react">React</Chip>
       <Chip value="ng">Angular</Chip>
       <Chip value="svelte">Svelte</Chip>
       <Chip value="vue">Vue</Chip>
-    </Chips>
          </div>
     );
   }

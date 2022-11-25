@@ -1,5 +1,5 @@
 import { ColorScheme, ColorSchemeProvider, MantineProvider, Paper } from "@mantine/core";
-import { useHotkeys, useLocalStorageValue } from "@mantine/hooks";
+import { useHotkeys, useLocalStorage } from "@mantine/hooks";
 import "./App.css";
 import AppShellExample from "./Components/AppShell";
 import Buttons from "./Components/Buttons";
@@ -7,7 +7,7 @@ import Cards from "./Components/Cards";
 import LightAndDarkModeButton from "./Components/LightDarkButton";
 
 function App() {
-  const [colorScheme, setColorScheme] = useLocalStorageValue<ColorScheme>({
+  const [colorScheme, setColorScheme] = useLocalStorage<ColorScheme>({
     key: 'mantine-color-scheme',
     defaultValue: 'light',
   });

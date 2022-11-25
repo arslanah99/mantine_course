@@ -12,12 +12,12 @@
         axios.get("https://www.balldontlie.io/api/v1/players/237")
         .then((res) => {
             setRandomPlayer(res.data);
-            notifications.showNotification({
-                message: "WE GOT YA DATA!",
-                title: "HERES SOME DATA!",
-                color: "green",
-                icon: <CheckIcon />
-            })
+            // notifications.notifications({
+            //     message: "WE GOT YA DATA!",
+            //     title: "HERES SOME DATA!",
+            //     color: "green",
+            //     icon: <CheckIcon />
+            // })
         })
     }
     
@@ -26,9 +26,9 @@
                 <Button
                     variant="outline"
                     onClick={() => {
-                        notifications.showNotification({
-                            message: "WE ARE GETTING YOUR DATA"
-                        })
+                        // notifications.notifications({
+                        //     message: "WE ARE GETTING YOUR DATA"
+                        // })
                         getPlayerName()
                     }}
                 >
