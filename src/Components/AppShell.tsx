@@ -15,6 +15,7 @@ import CalendarExample from './CalendarExample';
 import TimeInputExample from './TimeInputExample';
 import NotificationExample from './NotificationsExample';
 import EmblaCarouselExample from './EmblaCarousel';
+import AllHooks from './Hooks/AllHooks';
 
 function AppShellExample() {
   const [opened, setOpened] = useState(false);
@@ -64,6 +65,9 @@ function AppShellExample() {
             <Text component={Link} variant="link" to="/emblaCarouselPage">
              Embla Carosuel Page
             </Text>
+            <Text component={Link} variant="link" to="/hooksExamplePage">
+             Hooks Example Page
+            </Text>
            </div>
          </Navbar.Section>
          <Navbar.Section>
@@ -100,6 +104,7 @@ function AppShellExample() {
         <Route path="/timeInputPage" element={<TimeInputExample />} />
         <Route path="/notificationPage" element={<NotificationExample />} />
         <Route path="/emblaCarouselPage" element={<EmblaCarouselExample />} />
+        <Route path="/hooksExamplePage" element={<AllHooks />} />
 
       </Routes>
     </AppShell>
